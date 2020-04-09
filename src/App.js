@@ -1,8 +1,7 @@
 import React from 'react';
 import Task from './components/Task';
 import TaskInput from './components/TaskInput';
-// import store from './store';
-// import { observer } from 'mobx-react';
+
 
 
 class App extends React.Component {
@@ -22,10 +21,11 @@ class App extends React.Component {
     this.setState(state => {
       let { tasks } = state;
       tasks.push({
-        id: tasks.length !== 0 ? task.length : 0,
+        id: tasks.length !== 0 ? tasks.length : 0,
         title: task,
         done: false
       });
+      console.log(tasks.length);
       console.log(tasks);
 
       return tasks;
@@ -37,6 +37,10 @@ class App extends React.Component {
     this.setState(state => {
       let { tasks } = state;
       tasks[index].done = true;
+      // console.log('done');
+
+      // console.log(tasks.length);
+      // console.log(tasks);
       return tasks;
     });
   };
@@ -46,6 +50,11 @@ class App extends React.Component {
     this.setState(state => {
       let { tasks } = state;
       delete tasks[index];
+
+      console.log('delete');
+
+      console.log(tasks.length);
+      console.log(tasks);
       return tasks;
     })
   }
