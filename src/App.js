@@ -10,9 +10,15 @@ class App extends React.Component {
 
     this.state = {
       tasks: [
-        { id: 0, title: 'Create app1', done: false },
-        { id: 1, title: 'Create app2', done: true },
-        { id: 2, title: 'Create app3', done: false }
+        { id: 0, title: 'Improve the English language', done: false },
+        { id: 1, title: 'Do 1-5 tasks on Codewars', done: false },
+        { id: 2, title: 'Make some feature on Codepen', done: false },
+        { id: 3, title: 'Watch video about JS', done: false },
+        { id: 4, title: 'Watch video about HTML/CSS', done: false },
+        { id: 5, title: 'Sport activity', done: false },
+        { id: 6, title: '15 minutes on klava.org', done: false },
+        { id: 7, title: 'Read 5 pages on METANIT', done: false },
+        { id: 8, title: 'Check vacancies', done: false }
       ]
     };
   }
@@ -37,10 +43,6 @@ class App extends React.Component {
     this.setState(state => {
       let { tasks } = state;
       tasks[index].done = true;
-      // console.log('done');
-
-      // console.log(tasks.length);
-      // console.log(tasks);
       return tasks;
     });
   };
@@ -50,11 +52,6 @@ class App extends React.Component {
     this.setState(state => {
       let { tasks } = state;
       delete tasks[index];
-
-      console.log('delete');
-
-      console.log(tasks.length);
-      console.log(tasks);
       return tasks;
     })
   }
